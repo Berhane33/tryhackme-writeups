@@ -26,3 +26,10 @@
 - The vendor labels told the story: Microsoft `Trojan:Win32/Agent`, Kaspersky `Trojan-Spy.Win32.Agent`, Norton `Infosteal`, Malwarebytes `Spyware.Agent`, ESET `Win32/Spy` — consistent trojan + spyware/infostealer verdicts across vendors = high-confidence malicious
 - Lesson: read the labels, not just the count. Consistent malware family names across many vendors means strong consensus; a handful of generic flags with a neutral community score could be a false positive
 - SOC angle: `invoice_payment.exe` is a textbook phishing lure filename. This is Tier 1 triage in miniature — file lookup → detection consensus → verdict labels → escalate or block
+
+## Vulnerability database (NVD simulation)
+- Looked up `CVE-2026-1337` in TryHackMe's vulnerability database: a critical SQL injection in Apache WebPortal, exploitable without authentication via the `userId` parameter, leading to unauthorized access to credentials and session tokens
+- CVSS score: 10/10 (HIGH/CRITICAL), vector `AV:N/AC:L/Au:N/C:C/I:C/A:C`, weakness CWE-89 (SQL Injection)
+- How to read the vector: Attack Vector NETWORK (exploitable remotely) + Authentication NONE (no login needed) + complete loss of Confidentiality, Integrity, Availability = worst case, hence a perfect 10
+- Lesson: the CVE ID names the vulnerability, CVSS scores its severity, CWE names the weakness type, and the vector string explains *why* it scored that way — four pieces that together tell the full story
+- This closes the loop with the Shodan task: Shodan finds exposed software versions → the vuln database tells you whether that version has a known CVE and how bad it is. That pairing is the core of vulnerability assessment
