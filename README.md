@@ -1,2 +1,9 @@
-# tryhackme-writeups
-Hands-on cybersecurity lab notes from TryHackme - networking, Linux, web security, and defensive / offensive fundamentals, with methods, commands, and lessons learned.
+# TryHackMe Write-ups
+
+Hands-on cybersecurity lab notes from TryHackMe — methods, commands, and lessons learned.
+
+## Rooms
+
+| Room | Write-up |
+| ---- | -------- |
+| [Offensive Security Intro](https://tryhackme.com/room/offensivesecurityintro) | [notes](./offensive-security-intro.md) |
