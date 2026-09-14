@@ -7,3 +7,4 @@ Hands-on cybersecurity lab notes from TryHackMe — methods, commands, and lesso
 | Room | Write-up |
 | ---- | -------- |
 | [Offensive Security Intro](https://tryhackme.com/room/offensivesecurityintro) | [notes](./offensive-security-intro.md) |
+| [Search Skills](https://tryhackme.com/room/searchskills) | [notes](./search-skills.md) |
