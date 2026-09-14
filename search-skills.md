@@ -33,3 +33,10 @@
 - How to read the vector: Attack Vector NETWORK (exploitable remotely) + Authentication NONE (no login needed) + complete loss of Confidentiality, Integrity, Availability = worst case, hence a perfect 10
 - Lesson: the CVE ID names the vulnerability, CVSS scores its severity, CWE names the weakness type, and the vector string explains *why* it scored that way — four pieces that together tell the full story
 - This closes the loop with the Shodan task: Shodan finds exposed software versions → the vuln database tells you whether that version has a known CVE and how bad it is. That pairing is the core of vulnerability assessment
+
+## Technical documentation (man pages)
+- Task 5: when you hit a command you don't know, the official documentation comes first — not a random tutorial
+- Linux man pages document every command right in the terminal: `man <command>`
+- Example worked through: `man nc` → NAME section reads "nc – arbitrary TCP and UDP connections and listens"; DESCRIPTION shows it can open TCP connections, send UDP packets, listen on ports, do port scanning, and handle IPv4/IPv6
+- Man page anatomy worth knowing: NAME (one-line summary), SYNOPSIS (flag syntax), DESCRIPTION (what it does), OPTIONS (every flag explained) — read top-down until you have what you need
+- Analyst lesson: strong search skills mean knowing *where* to look first — vendor docs and man pages for tools, NVD for vulnerabilities, Shodan for exposure. Each source answers a different question
