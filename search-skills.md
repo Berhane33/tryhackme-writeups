@@ -19,3 +19,10 @@
 ## Notes
 - Version disclosure in banners is information leakage — as a defender, check what your own organisation exposes on Shodan (attack surface management)
 - This is recon/OSINT work: the same skill attackers use to find targets is what SOC analysts use to understand exposure
+
+## TryDetectMe (VirusTotal simulation)
+- Searched the suspicious file `invoice_payment.exe` on TryDetectMe, a VirusTotal simulation
+- Result: 52/72 security vendors flagged it as malicious, community score -15
+- The vendor labels told the story: Microsoft `Trojan:Win32/Agent`, Kaspersky `Trojan-Spy.Win32.Agent`, Norton `Infosteal`, Malwarebytes `Spyware.Agent`, ESET `Win32/Spy` — consistent trojan + spyware/infostealer verdicts across vendors = high-confidence malicious
+- Lesson: read the labels, not just the count. Consistent malware family names across many vendors means strong consensus; a handful of generic flags with a neutral community score could be a false positive
+- SOC angle: `invoice_payment.exe` is a textbook phishing lure filename. This is Tier 1 triage in miniature — file lookup → detection consensus → verdict labels → escalate or block
